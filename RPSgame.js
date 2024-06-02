@@ -1,5 +1,5 @@
 function getHumanChoice(){
-    let humanChoice = prompt("Please choose either Rock, Paper or Sciccors");
+    var humanChoice = prompt("Please choose either Rock, Paper or Sciccors");
     return humanChoice
 }
-
+console.log(getHumanChoice());
