@@ -15,12 +15,12 @@ function getHumanChoice(){
 console.log(humanChoice);
 
 function getComputerChoice(){
-    const random = Math.floor((Math.random()*3)+1);
-    if (random ===1){
+    const computerChoice = Math.floor((Math.random()*3)+1);
+    if (computerChoice ===1){
         return "ROCK"
-    } else if (random === 2){
+    } else if (computerChoice === 2){
         return "PAPER"
-    } else if (random === 3){
+    } else if (computerChoice === 3){
         return "SCISSORS"
     };
 }
