@@ -1,0 +1,7 @@
+Get player input of choice between rock, paper and scissors (RPS)
+generate randomly computer choice between RPS
+compare the choices and determine who won the round
+Log the outcome of a round
+play for 5 rounds
+determine winner of the game
+
