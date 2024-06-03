@@ -7,7 +7,7 @@ function playGame(){
     let i = 1;
     while (i<=5){
         function getHumanChoice(){
-            const request = prompt("Please choose either Rock, Paper or Sciccors");
+            const request = prompt("Please choose either Rock, Paper or Scissors");
             var humanChoice = request.toUpperCase();
             if (humanChoice === "ROCK"){
                 return humanChoice;
