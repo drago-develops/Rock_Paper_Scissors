@@ -62,9 +62,9 @@ function playGame(){
     }
     function gameResults(){
         if (humanScore>computerScore){
-            console.log("Congratulations, you've won!");
+            console.log(`Congratulations, you've won! Your score is ${humanScore} and computer score is ${computerScore}.`);
         } else if (humanScore<computerScore){
-            console.log("Computer has won, better luck next time.");
+            console.log(`Computer has won, better luck next time. Your score is ${humanScore} and computer score is ${computerScore}.`);
         } else {
             console.log("It's a draw, play one more round.")
         }
