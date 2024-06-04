@@ -16,7 +16,8 @@ function playGame(){
             } else if(humanChoice  === "SCISSORS"){
                 return humanChoice;
             } else {
-                alert("Please enter either Rock, Paper or Scissors. Please check your spelling")
+                alert("Please enter either Rock, Paper or Scissors. Please check your spelling");
+                return getHumanChoice();
             }
             
         };
