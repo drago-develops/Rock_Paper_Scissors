@@ -100,6 +100,10 @@ function playRound(humanChoice, computerChoice){
 };
 //playRound(humanSelection, computerSelection);
 
+document.addEventListener("click", function(){
+    document.getElementById("score").innerHTML = `Your score: ${humanScore}! Computer score: ${computerScore}!`;
+})
+
 
 function gameResults(){
     if (humanScore>computerScore){
