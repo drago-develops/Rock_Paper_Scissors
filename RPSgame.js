@@ -1,3 +1,5 @@
+alert("Play 5 rounds against computer in a classic game of Rock Paper and Scissors.")
+
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
@@ -66,9 +68,9 @@ function updateScore() {
 
 function endOfTheGame(){
     if (humanScore === 5){
-        alert("CONGRATULATIONS! YOU HAVE WON THE GAME!");
+        alert("CONGRATULATIONS! YOU HAVE WON THE GAME! REFRESH THE PAGE TO PLAY AGAIN!");
     } else if (computerScore === 5){
-        alert("OH NO! YOU HAVE LOST THE GAME! REFRESH TO PLAY AGAIN!");
+        alert("OH NO! YOU HAVE LOST THE GAME! REFRESH THE PAGE TO PLAY AGAIN!");
     };
 };
 
