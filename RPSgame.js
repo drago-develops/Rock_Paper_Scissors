@@ -61,14 +61,14 @@ function playRound(humanChoice, computerChoice){
 
 function updateScore() {
     scoreDiv.innerHTML = `Your score: ${humanScore}! Computer score: ${computerScore}!`;
+    endOfTheGame();
 }
 
-function gameResults() {
-    if (humanScore > computerScore) {
-        console.log(`Congratulations, you've won! Your score is ${humanScore} and computer score is ${computerScore}.`);
-    } else if (humanScore < computerScore) {
-        console.log(`Computer has won, better luck next time. Your score is ${humanScore} and computer score is ${computerScore}.`);
-    } else {
-        console.log("It's a draw, play one more round.");
-    }
-}
+function endOfTheGame(){
+    if (humanScore === 5){
+        alert("CONGRATULATIONS! YOU HAVE WON THE GAME!");
+    } else if (computerScore === 5){
+        alert("OH NO! YOU HAVE LOST THE GAME! REFRESH TO PLAY AGAIN!");
+    };
+};
+
