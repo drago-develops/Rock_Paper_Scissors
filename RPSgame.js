@@ -1,21 +1,32 @@
 const rock = document.querySelector("#rock");
-rock.addEventListener("click", () => {
-    playRound("ROCK",getComputerChoice())
-});
-
 const paper = document.querySelector("#paper");
-paper.addEventListener("click", () => {
-    playRound("PAPER",getComputerChoice())
-});
-
 const scissors = document.querySelector("#scissors");
-scissors.addEventListener("click", () => {
-    playRound("SCISSORS",getComputerChoice())
+const resultsDiv = document.getElementById("results");
+const scoreDiv = document.getElementById("score");
+const humanHand = document.getElementById("humanHand");
+const computerHand = document.getElementById("computerHand");
+
+let humanSelection = '';
+let humanScore = 0;
+let computerScore = 0;
+
+rock.addEventListener("click", () => {
+    humanSelection = "ROCK";
+    playRound(humanSelection, getComputerChoice());
+    updateScore();
 });
 
-var humanScore = 0;
-var computerScore = 0;
+paper.addEventListener("click", () => {
+    humanSelection = "PAPER";
+    playRound(humanSelection, getComputerChoice());
+    updateScore();
+});
 
+scissors.addEventListener("click", () => {
+    humanSelection = "SCISSORS";
+    playRound(humanSelection, getComputerChoice());
+    updateScore();
+});
 
 // function getHumanChoice(){
 //     const request = prompt("Please choose either Rock, Paper or Scissors");
