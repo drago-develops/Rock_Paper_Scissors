@@ -6,6 +6,7 @@ body{
     align-items: center;
     font-weight: 900;
     color: white;
+    font-size: xx-large;
 }
 button{
     width: 300px;
@@ -19,4 +20,20 @@ button{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+}
+
+#lifeResults{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    border: 3px solid yellow;
+    border-radius: 15px;
+}
+.cont{
+    margin: 50px;
+}
+#results{
+    font-size: medium;
 }
