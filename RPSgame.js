@@ -28,35 +28,12 @@ scissors.addEventListener("click", () => {
     updateScore();
 });
 
-// function getHumanChoice(){
-//     const request = prompt("Please choose either Rock, Paper or Scissors");
-//     var humanChoice = request.toUpperCase();
-//     if (humanChoice === "ROCK"){
-//         return humanChoice;
-//     } else if (humanChoice === "PAPER"){
-//         return humanChoice;
-//     } else if(humanChoice  === "SCISSORS"){
-//         return humanChoice;
-//     } else {
-//         alert("Please enter either Rock, Paper or Scissors. Please check your spelling");
-//         return getHumanChoice();
-//     }
-//};
 function getComputerChoice(){
-    const computerChoice = Math.floor((Math.random()*3)+1);
-    if (computerChoice ===1){
-        return "ROCK"
-    } else if (computerChoice === 2){
-        return "PAPER"
-    } else if (computerChoice === 3){
-        return "SCISSORS"
-    };
-};
-//const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
-
-
+    const computerChoice = Math.floor((Math.random() * 3) + 1);
+    if (computerChoice === 1) return "ROCK";
+    if (computerChoice === 2) return "PAPER";
+    if (computerChoice === 3) return "SCISSORS";
+}
 
 function playRound(humanChoice, computerChoice){
     let resultText = '';
@@ -73,22 +50,25 @@ function playRound(humanChoice, computerChoice){
     } else {
         resultText = `You drew the same hand as the computer, no score.`;
     }
-};
-//playRound(humanSelection, computerSelection);
 
-document.addEventListener("click", function(){
-    document.getElementById("score").innerHTML = `Your score: ${humanScore}! Computer score: ${computerScore}!`;
-})
+    const li = document.createElement("li");
+    li.textContent = resultText;
+    resultsDiv.appendChild(li);
 
+    humanHand.innerHTML = humanChoice;
+    computerHand.innerHTML = computerChoice;
+}
 
-function gameResults(){
-    if (humanScore>computerScore){
+function updateScore() {
+    scoreDiv.innerHTML = `Your score: ${humanScore}! Computer score: ${computerScore}!`;
+}
+
+function gameResults() {
+    if (humanScore > computerScore) {
         console.log(`Congratulations, you've won! Your score is ${humanScore} and computer score is ${computerScore}.`);
-    } else if (humanScore<computerScore){
+    } else if (humanScore < computerScore) {
         console.log(`Computer has won, better luck next time. Your score is ${humanScore} and computer score is ${computerScore}.`);
     } else {
-        console.log("It's a draw, play one more round.")
+        console.log("It's a draw, play one more round.");
     }
-};
-gameResults();
-
+}
